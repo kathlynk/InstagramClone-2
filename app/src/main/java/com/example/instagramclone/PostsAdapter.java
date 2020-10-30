@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.parse.ParseFile;
 
 import java.util.List;
 
@@ -57,19 +58,21 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
 
         TextView tvUsername;
         ImageView ivPostImage;
-        EditText etDescription;
+        TextView tvDescription;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             tvUsername = itemView.findViewById(R.id.tvUsername);
             ivPostImage = itemView.findViewById(R.id.ivPostImage);
-            etDescription = itemView.findViewById(R.id.etDescription);
+            tvDescription = itemView.findViewById(R.id.tvDescription);
         }
 
         public void bind(Post post) {
             tvUsername.setText(post.getUser().getUsername());
-            Glide.with(context).load(post.getImage().getUrl()).into(ivPostImage);
-            etDescription.setText(post.getDescription());
+            ParseFile image = post.getImage();
+            if (image != null)
+                Glide.with(context).load(image.getUrl()).into(ivPostImage);
+            tvDescription.setText(post.getDescription());
         }
     }
 }

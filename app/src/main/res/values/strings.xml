@@ -6,8 +6,11 @@
     <string name="log_in">LOG IN</string>
     <string name="sign_up">SIGN UP</string>
     <string name="log_out">LOG OUT</string>
-    <string name="home">Home</string>
-    <string name="post">Post</string>
-    <string name="user">User</string>
     <string name="new_post">New Post</string>
+    <string name="profile">Profile</string>
+    <string name="compose">Compose</string>
+    <string name="home">Home</string>
+    <string name="take_picture">TAKE PICTURE</string>
+    <string name="description">Description…</string>
+    <string name="submit">SUBMIT</string>
 </resources>

@@ -10,17 +10,19 @@
         android:id="@+id/ivSave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/etDescription"
+        android:layout_below="@+id/ivPostImage"
         android:layout_alignParentEnd="true"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="10dp"
-        app:srcCompat="@drawable/ufi_save" />
+        app:srcCompat="@drawable/ufi_save_icon" />
 
     <ImageView
         android:id="@+id/ivDirect"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/etDescription"
+        android:layout_below="@+id/ivPostImage"
         android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
         android:layout_toEndOf="@+id/ivComment"
         app:srcCompat="@drawable/direct" />
 
@@ -28,8 +30,9 @@
         android:id="@+id/ivComment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/etDescription"
+        android:layout_below="@+id/ivPostImage"
         android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
         android:layout_toEndOf="@+id/ivLike"
         app:srcCompat="@drawable/ufi_comment" />
 
@@ -37,9 +40,10 @@
         android:id="@+id/ivLike"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/etDescription"
+        android:layout_below="@+id/ivPostImage"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
         app:srcCompat="@drawable/ufi_heart" />
 
     <TextView
@@ -47,8 +51,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
+        android:layout_margin="10dp"
         android:layout_marginStart="10dp"
-        android:hint="Username"
+        android:hint="@string/username"
         android:textColor="#000000"
         android:textSize="18sp" />
 
@@ -60,13 +65,14 @@
         android:layout_marginTop="0dp"
         tools:srcCompat="@tools:sample/avatars" />
 
-    <EditText
-        android:id="@+id/etDescription"
+    <TextView
+        android:id="@+id/tvDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/ivPostImage"
-        android:layout_marginTop="0dp"
+        android:layout_below="@id/ivLike"
+        android:layout_margin="10dp"
         android:ems="10"
-        android:hint="Description..."
-        android:inputType="textPersonName" />
+        android:hint="@string/description"
+        android:textColor="#000000"
+        android:textSize="16sp" />
 </RelativeLayout>
